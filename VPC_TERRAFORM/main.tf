@@ -19,7 +19,7 @@ resource "aws_instance" "web_server" {
   instance_type = "t2.micro"
   key_name      = "terraform-key"
   subnet_id     = aws_subnet.public_subnet.id
-  vpc_security_group_ids = ["ssh_access"]
+  security_groups = ["ssh_access"]
 }
 
 
